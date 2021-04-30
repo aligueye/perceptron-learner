@@ -17,18 +17,19 @@ class Model:
         self.flower = flower
         self.init_weights()
 
-    def init_weights(self, random_weights = True):
+    def init_weights(self, num_attributes, random_weights = True):
         """
         Initialize weights of unlearned model
 
         args:
+            num_attributes: Number of attributes in each training example
             random: Initalizes weights to random value between 1-0. If passed False, initialize all weights to 1
         """
 
         if random_weights:
-            self.weights = [random.random() for i in range(4)]
+            self.weights = [random.random() for i in range(num_attributes + 1)]
         else:
-            self.weights = [1.0 for i in range(4)]
+            self.weights = [1.0 for i in range(num_attributes + 1)]
 
     def get_training_data(self, shuffle = False):
         """
@@ -39,6 +40,23 @@ class Model:
         """
 
         pass
+
+    def classify(self, training_example):
+        """
+        Classify the provided training example based on the current weights
+
+        args:
+            training_example: List of attributes to use in classify the flower type
+        """
+
+        total = 0
+        training_example.insert(0, 1) # Makes the first value 1, pushes every other attribute over by 1
+        for i in range(len(training_example)):
+            total += self.weights[i] * training_example[i] # total += w_i * x_i
+        if total > 0:
+            return 1
+        else:
+            return -1
     
     def to_string(self):
         print(f"Target flower: {self.flower}")
