@@ -2,7 +2,7 @@
 import numpy as np
 
 class Perceptron:
-   def __init__(self, rate = 0.01, niter = 10):
+   def __init__(self, rate = 0.01, niterations = 10):
       self.rate = rate
       self.niterations = niterations
 
@@ -15,7 +15,7 @@ class Perceptron:
       # assign weights
       self.weight = np.zeros(1 + vectors.shape[1]) #np.zeros() returns a new array of given shape and type, where the element's value as 0.
 
-      # Number of misclassifications
+    
       self.errors = []  # Number of misclassifications
 
       for i in range(self.niterations): #for all misclassifications 
@@ -29,9 +29,9 @@ class Perceptron:
       return self
 
    def dot_product(self, vectors):
-      """Calculate the dot profuc """
+      """Calculate the dot product """
       return np.dot(vectors, self.weight[1:]) + self.weight[0]
 
    def predict(self, vectors):
       """Return class label after unit step"""
-      return np.where(self.net_input(vectors) >= 0.0, 1, -1)
+      return np.where(self.dot_product(vectors) >= 0.0, 1, -1)
