@@ -20,7 +20,7 @@ class Perceptron:
 
       for i in range(self.niterations): #for all misclassifications 
          error= 0 #error counter
-         for x, target in zip(vectors, values): $for x in the training vectors and values 
+         for x, target in zip(vectors, values): #for x in the training vectors and values 
             delta_w = self.rate * (target - self.predict(xi)) #calculate the approperiate calculations for w and update count
             self.weight[1:] += delta_w * xi
             self.weight[0] += delta_w
@@ -30,8 +30,8 @@ class Perceptron:
 
    def dot_product(self, vectors):
       """Calculate the dot profuc """
-      return np.dot(X, self.weight[1:]) + self.weight[0]
+      return np.dot(vectors, self.weight[1:]) + self.weight[0]
 
    def predict(self, vectors):
       """Return class label after unit step"""
-      return np.where(self.net_input(X) >= 0.0, 1, -1)
+      return np.where(self.net_input(vectors) >= 0.0, 1, -1)
