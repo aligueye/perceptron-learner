@@ -3,8 +3,10 @@ import numpy as np
 
 class Perceptron:
    def __init__(self, rate = 0.01, niterations = 10):
-      self.rate = rate
-      self.niterations = niterations
+  #Initiating the learning rate and number of iterations.
+        self.rate = rate
+        self.Iterations = niterations
+        self.errors = []
 
    def train(self, vectors, values):
       """
@@ -14,9 +16,6 @@ class Perceptron:
 
       # assign weights
       self.weight = np.zeros(1 + vectors.shape[1]) #np.zeros() returns a new array of given shape and type, where the element's value as 0.
-
-    
-      self.errors = []  # Number of misclassifications
 
       for i in range(self.niterations): #for all misclassifications 
          error= 0 #error counter
@@ -34,4 +33,4 @@ class Perceptron:
 
    def predict(self, vectors):
       """Return class label after unit step"""
-      return np.where(self.dot_product(vectors) >= 0.0, 1, -1)
+      return np.where(self.dot_product(vectors) >= 0.0, 1, -1) #Predict method for predicting the classification of data inputs.
