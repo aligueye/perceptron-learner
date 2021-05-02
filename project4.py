@@ -20,7 +20,7 @@ class Perceptron:
 
       for i in range(self.niterations): #for all misclassifications 
          error= 0 #error counter
-         for x, target in zip(vectors, values): #for x in the training vectors and values 
+         for xi, target in zip(vectors, values): #for x in the training vectors and values 
             delta_w = self.rate * (target - self.predict(xi)) #calculate the approperiate calculations for w and update count
             self.weight[1:] += delta_w * xi
             self.weight[0] += delta_w
