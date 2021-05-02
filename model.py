@@ -6,7 +6,7 @@ import random
 
 class Model:
 
-    def __init__(self, flower):
+    def __init__(self, flower,rate = 0.01, niterations = 10):
         """
 		Initialize unlearned model.
 
@@ -15,7 +15,10 @@ class Model:
 		"""
 
         self.flower = flower
-        self.init_weights()
+        self.init_weights() 
+	self.rate = rate
+        self.Iterations = niterations
+        self.errors = []
 
     def init_weights(self, num_attributes, random_weights = True):
         """
@@ -41,7 +44,23 @@ class Model:
 
         pass
 
-    def classify(self, training_example):
+    def train(self, vectors, values):
+      """
+      vectors : Training vectors, vectors.shape in the form of [samples, #features]
+      values: Target values, values.shape in the form of [#samples]
+      """
+
+      for i in range(self.niterations): #for all misclassifications 
+         error= 0 #error counter
+         for xi, target in zip(vectors, values): #for x in the training vectors and values 
+            delta_w = self.rate * (target - self.predict(xi)) #calculate the approperiate calculations for w and update count
+            self.weight[1:] += delta_w * xi
+            self.weight[0] += delta_w
+            count += int(delta_w != 0.0)
+         self.errors.append(error) #append error counter 
+      return self
+	
+     def classify(self, training_example):
         """
         Classify the provided training example based on the current weights
 
