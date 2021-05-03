@@ -62,11 +62,11 @@ class Model:
  
  	
     def perceptron(train, test, l_rate, n_epoch)
-#Preceptron Algorithm weights using stochastic gradient descent
       """
       l_rate: takes the learning rate as a parameter
       n_epoch: takes the epoch as a parameter
-      """       
+      """ 
+#Preceptron Algorithm weights using stochastic gradient descent
 	predictions = list()
 	weights = train_weights(train, l_rate, n_epoch)
 	for row in test:
