@@ -61,7 +61,7 @@ class Model:
 	return weights
  
  	
-    def perceptron(train, test, l_rate, n_epoch)
+    def perceptron(train, test, l_rate, n_epoch):
       """
       l_rate: takes the learning rate as a parameter
       n_epoch: takes the epoch as a parameter
