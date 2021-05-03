@@ -44,21 +44,36 @@ class Model:
 
         pass
 
-    def train(self, vectors, values):
+    def train_weights(train, l_rate, n_epoch):
       """
-      vectors : Training vectors, vectors.shape in the form of [samples, #features]
-      values: Target values, values.shape in the form of [#samples]
-      """
-
-      for i in range(self.niterations): #for all misclassifications 
-         error= 0 #error counter
-         for xi, target in zip(vectors, values): #for x in the training vectors and values 
-            delta_w = self.rate * (target - self.predict(xi)) #calculate the approperiate calculations for w and update count
-            self.weight[1:] += delta_w * xi
-            self.weight[0] += delta_w
-            count += int(delta_w != 0.0)
-         self.errors.append(error) #append error counter 
-      return self
+      l_rate: takes the learning rate as a parameter
+      n_epoch: takes the epoch as a parameter
+      """ 
+# Estimate Perceptron weights using stochastic gradient descent
+	weights = [0.0 for i in range(len(train[0]))]
+	for epoch in range(n_epoch):
+		for row in train:
+			prediction = classify(row, weights)
+			error = row[-1] - prediction
+			weights[0] = weights[0] + l_rate * error
+			for i in range(len(row)-1):
+				weights[i + 1] = weights[i + 1] + l_rate * error * row[i]
+	return weights
+ 
+ 	
+    def perceptron(train, test, l_rate, n_epoch)
+#Preceptron Algorithm weights using stochastic gradient descent
+     """
+      l_rate: takes the learning rate as a parameter
+      n_epoch: takes the epoch as a parameter
+      """ 
+	predictions = list()
+	weights = train_weights(train, l_rate, n_epoch)
+	for row in test:
+		prediction = classify(row, weights)
+		predictions.append(prediction)
+	return(predictions)
+      
 	
      def classify(self, training_example):
         """
