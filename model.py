@@ -15,7 +15,9 @@ class Model:
 		"""
 
         self.flower = flower
-        self.init_weights()
+        self.init_weights(4)
+        self.errors = 0
+        self.epochs = 0
 
     def init_weights(self, num_attributes, random_weights = True):
         """
@@ -31,27 +33,62 @@ class Model:
         else:
             self.weights = [1.0 for i in range(num_attributes + 1)]
 
-    def get_training_data(self, shuffle = False):
+    def train(self, examples, shuffle = False):
         """
-        Get training data into model
+        Trains model with provided data. Algorithm implemented is Stochastic Gradient Descent (SGD)
 
         args:
             shuffle: Determines if data should be shuffles. If passed True, shuffle training data randomly
         """
 
-        pass
+        # Randomly shuffles examples
+        if shuffle:
+            random.shuffle(examples)
+
+        errors_in_epoch = 1 # set to 1 to assure training loop executes
+
+        while errors_in_epoch > 0:
+
+            self.epochs += 1
+            errors_in_epoch = 0
+
+            for example in examples:
+                target = self.classify(example)
+                output = self.predict(example)
+
+                if target is not output: # Weights are only changed if prediction is incorrect
+                    
+                    self.errors += 1
+                    errors_in_epoch +=1
+
+                    for i in range(len(example) - 1):
+                        self.weights[i] = self.weights[i] + 0.01 * (target - output) * example[i]
+
 
     def classify(self, training_example):
         """
         Classify the provided training example based on the current weights
 
         args:
-            training_example: List of attributes to use in classify the flower type
+            training_example: List of attributes to use to classify the flower type
+        """
+
+        if self.flower is training_example[-1]:
+            return 1
+        else:
+            return -1
+
+    def predict(self, training_example):
+        """
+        Predict the provided training example based on the current weights
+
+        args:
+            training_example: List of attributes to use in predict the flower type
         """
 
         total = 0
-        training_example.insert(0, 1) # Makes the first value 1, pushes every other attribute over by 1
-        for i in range(len(training_example)):
+        
+        for i in range(len(training_example) - 1):
             total += self.weights[i] * training_example[i] # total += w_i * x_i
         if total > 0:
             return 1
@@ -60,7 +97,9 @@ class Model:
     
     def to_string(self):
         print(f"Target flower: {self.flower}")
-        print(f"Learned weights: {self.weights}")
+        print(f"Weights: {self.weights}")
+        print(f"Epochs: {self.epochs}")
+        print(f"Errors {self.errors}")
 
 def main():
     model = Model("Iris-setosa")
