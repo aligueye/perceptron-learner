@@ -18,8 +18,6 @@ class Model:
         self.errors = 0
         self.epochs = 0
 
-        # self.train(self)
-
     def init_weights(self, num_attributes, random_weights = False):
         """
         Initialize weights of unlearned model
@@ -77,8 +75,6 @@ class Model:
         args:
             training_example: List of attributes to use to classify the flower type
         """
-        # print(f"flower: {self.flower}")
-        # print(f"curr flower: {training_example[-1]}")
         if self.flower == training_example[-1]:
             return 1
         else:
@@ -105,10 +101,3 @@ class Model:
         print(f"Weights: {self.weights}")
         print(f"Epochs: {self.epochs}")
         print(f"Errors {self.errors}")
-
-# def main():
-#     model = Model("Iris-setosa")
-#     model.to_string()
-
-# if __name__ == "__main__":	
-#     main()
