@@ -44,9 +44,11 @@ class Model:
 
         errors_in_epoch = 1 # set to 1 to assure training loop executes
         errors_in_prev = 0
+        errors_in_prev2 = 0
 
-        while (errors_in_epoch > 0) ^ (errors_in_prev == errors_in_epoch):
+        while (errors_in_epoch > 0) ^ (errors_in_prev2 == errors_in_epoch):
             if(self.epochs != 0):
+                errors_in_prev2 = errors_in_prev
                 errors_in_prev = errors_in_epoch
 
             self.epochs += 1
