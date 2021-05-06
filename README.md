@@ -10,10 +10,7 @@ A basic descision tree learning algorithm, capable of learning a tree from multi
 - 
 2. model.py 
 - 
-- contains the Node class, which
-   - is a simple, non-optimized n-tree with labeled edges
-   - serves as the backbone for the DecisionTree class
-   - can convert itself into a string representation
+- 
 3. D2
 - The "epoch stats file" containing epoch #, # of errors on training data for that epoch, and current weight vector for each of the three LPs for T2. The plot for each of the three LPs for T2.
 4. D3
