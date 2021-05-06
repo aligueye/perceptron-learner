@@ -1,6 +1,6 @@
 # Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
 # Filename: model.py
-# Description: Perceptron model
+# Description: Has the model class which is vital for training our perceptron. 
 
 import random
 import matplotlib.pyplot as plt

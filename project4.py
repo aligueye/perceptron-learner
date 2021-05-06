@@ -1,6 +1,6 @@
 # Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
 # Filename: project4.py
-
+#Description: Main file for execution of all required tasks
 from model import Model
 import random
 
