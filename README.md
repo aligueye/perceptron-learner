@@ -1,6 +1,5 @@
 # perceptron-learner
-# Decision-Tree-Learner
-# CSC 426 Project 3
+# CSC 426 Project 4
 # Authors: 
 Lana Abdelmohsen,
 # Description: 
