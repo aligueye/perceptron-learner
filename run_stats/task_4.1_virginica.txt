@@ -1,0 +1,34 @@
+Target flower: Iris-virginica
+
+Epoch: 1
+Amount of Errors on Current Epoch: 14
+Current Weight Vector: [-0.04, -0.09200000000000007, -0.126, 0.16999999999999998, 0.08800000000000001]
+
+Epoch: 2
+Amount of Errors on Current Epoch: 28
+Current Weight Vector: [-0.08, -0.19400000000000006, -0.184, 0.30199999999999994, 0.2000000000000001]
+
+Epoch: 3
+Amount of Errors on Current Epoch: 32
+Current Weight Vector: [-0.12000000000000001, -0.2699999999999999, -0.236, 0.45799999999999974, 0.306]
+
+Epoch: 4
+Amount of Errors on Current Epoch: 13
+Current Weight Vector: [-0.14, -0.2939999999999998, -0.27199999999999996, 0.47199999999999964, 0.31600000000000006]
+
+Epoch: 5
+Amount of Errors on Current Epoch: 30
+Current Weight Vector: [-0.18, -0.4039999999999997, -0.3099999999999999, 0.5799999999999997, 0.4179999999999999]
+
+Epoch: 6
+Amount of Errors on Current Epoch: 17
+Current Weight Vector: [-0.19999999999999998, -0.4279999999999996, -0.32799999999999985, 0.6259999999999999, 0.4599999999999999]
+
+Epoch: 7
+Amount of Errors on Current Epoch: 17
+Current Weight Vector: [-0.21999999999999997, -0.4599999999999995, -0.3659999999999998, 0.678, 0.486]
+
+Target flower: Iris-virginica
+Weights: [-0.21999999999999997, -0.4599999999999995, -0.3659999999999998, 0.678, 0.486]
+Epochs: 7
+Errors: 17

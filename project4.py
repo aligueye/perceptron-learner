@@ -54,148 +54,17 @@ read_in_data('iris.data')
 # model_{name of target flower}_{task the model is for, with decimals replaced with underscores}
 
 # Task 2: Trains model for three different learning problems
-print("Task 2:\n")
-model_setosa_2 = Model('Iris-setosa')
-model_setosa_2.train(dataset)
-model_setosa_2.to_string()
-model_setosa_2.graph_errors_versus_epochs('graphs/task_2_setosa.pdf')
 
-print()
-
-model_versicolor_2 = Model('Iris-versicolor')
-model_versicolor_2.train(dataset)
-model_versicolor_2.to_string()
-model_versicolor_2.graph_errors_versus_epochs('graphs/task_2_versicolor.pdf')
-
-print()
-
-model_virginica_2 = Model('Iris-virginica')
-model_virginica_2.train(dataset)
-model_virginica_2.to_string()
-model_virginica_2.graph_errors_versus_epochs('graphs/task_2_virginica.pdf')
-
-print()
-
-
-# Task 3.1: Trains models with initial weights all set to 1
-print("Task 3.1:\n")
-model_setosa_3_1 = Model('Iris-setosa', 1)
-model_setosa_3_1.train(dataset)
-model_setosa_3_1.to_string()
-model_setosa_3_1.graph_errors_versus_epochs('graphs/task_3.1_setosa.pdf')
-
-print()
-
-model_versicolor_3_1 = Model('Iris-versicolor', 1)
-model_versicolor_3_1.train(dataset)
-model_versicolor_3_1.to_string()
-model_versicolor_3_1.graph_errors_versus_epochs('graphs/task_3.1_versicolor.pdf')
-
-print()
-
-model_virginica_3_1 = Model('Iris-virginica', 1)
-model_virginica_3_1.train(dataset)
-model_virginica_3_1.to_string()
-model_virginica_3_1.graph_errors_versus_epochs('graphs/task_3.1_virginica.pdf')
-
-print()
-
-
-# Task 3.2: Trains models with four random weights between 0 and 1
-print("Task 3.2:\n")
-model_setosa_3_2 = Model('Iris-setosa', random_weights=True)
-model_setosa_3_2.train(dataset)
-model_setosa_3_2.to_string()
-model_setosa_3_2.graph_errors_versus_epochs('graphs/task_3.2_setosa.pdf')
-
-print()
-
-model_versicolor_3_2 = Model('Iris-versicolor', random_weights=True)
-model_versicolor_3_2.train(dataset)
-model_versicolor_3_2.to_string()
-model_versicolor_3_2.graph_errors_versus_epochs('graphs/task_3.2_versicolor.pdf')
-
-print()
-
-model_virginica_3_2 = Model('Iris-virginica', random_weights=True)
-model_virginica_3_2.train(dataset)
-model_virginica_3_2.to_string()
-model_virginica_3_2.graph_errors_versus_epochs('graphs/task_3.2_virginica.pdf')
-
-print()
-
-
-# Task 3.3: Trains models with four random weights between 0 and 1
-print("Task 3.3:\n")
-model_setosa_3_3 = Model('Iris-setosa', random_weights=True)
-model_setosa_3_3.train(dataset)
-model_setosa_3_3.to_string()
-model_setosa_3_3.graph_errors_versus_epochs('graphs/task_3.3_setosa.pdf')
-
-print()
-
-model_versicolor_3_3 = Model('Iris-versicolor', random_weights=True)
-model_versicolor_3_3.train(dataset)
-model_versicolor_3_3.to_string()
-model_versicolor_3_3.graph_errors_versus_epochs('graphs/task_3.3_versicolor.pdf')
-
-print()
-
-model_virginica_3_3 = Model('Iris-virginica', random_weights=True)
-model_virginica_3_3.train(dataset)
-model_virginica_3_3.to_string()
-model_virginica_3_3.graph_errors_versus_epochs('graphs/task_3.3_virginica.pdf')
-
-print()
-
-
-# Task 4.1: Trains model for three different learning problems
-shuffle_data('iris_shuffle_for_T4.1.data')
-
-print("Task 4.1:\n")
-model_setosa_4_1 = Model('Iris-setosa')
-model_setosa_4_1.train(dataset)
-model_setosa_4_1.to_string()
-model_setosa_4_1.graph_errors_versus_epochs('graphs/task_4.1_setosa.pdf')
-
-print()
-
-model_versicolor_4_1 = Model('Iris-versicolor')
-model_versicolor_4_1.train(dataset)
-model_versicolor_4_1.to_string()
-model_versicolor_4_1.graph_errors_versus_epochs('graphs/task_4.1_versicolor.pdf')
-
-print()
-
-model_virginica_4_1 = Model('Iris-virginica')
-model_virginica_4_1.train(dataset)
-model_virginica_4_1.to_string()
-model_virginica_4_1.graph_errors_versus_epochs('graphs/task_4.1_virginica.pdf')
-
-print()
-
-
-# Task 4.2: Trains model for three different learning problems
-shuffle_data('iris_shuffle_for_T4.2.data')
-
-print("Task 4.2:\n")
-model_setosa_4_2 = Model('Iris-setosa')
-model_setosa_4_2.train(dataset)
-model_setosa_4_2.to_string()
-model_setosa_4_2.graph_errors_versus_epochs('graphs/task_4.2_setosa.pdf')
-
-print()
-
-model_versicolor_4_2 = Model('Iris-versicolor')
-model_versicolor_4_2.train(dataset)
-model_versicolor_4_2.to_string()
-model_versicolor_4_2.graph_errors_versus_epochs('graphs/task_4.2_versicolor.pdf')
-
-print()
-
-model_virginica_4_2 = Model('Iris-virginica')
-model_virginica_4_2.train(dataset)
-model_virginica_4_2.to_string()
-model_virginica_4_2.graph_errors_versus_epochs('graphs/task_4.2_virginica.pdf')
-
-print()
+for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']:
+    if task == '4.1' or task == '4.2':
+        shuffle_data(f'iris_shuffle_for_T{task}.data')
+    for species in ['setosa', 'versicolor', 'virginica']:
+        if task == '3.1':
+            model = Model(f'Iris-{species}', 1)
+        elif task == '3.2' or task == '3.3':
+            model = Model(f'Iris-{species}', random_weights=True)
+        else:
+            model = Model(f'Iris-{species}')
+        
+        model.train(dataset, f'run_stats/task_{task}_{species}.txt')
+        model.graph_errors_versus_epochs(f'graphs/task_{task}_{species}.pdf')

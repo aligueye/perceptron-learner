@@ -1,0 +1,22 @@
+Target flower: Iris-versicolor
+
+Epoch: 1
+Amount of Errors on Current Epoch: 2
+Current Weight Vector: [0.0, 0.014000000000000012, -0.0020000000000000018, -0.025999999999999995, -0.022000000000000006]
+
+Epoch: 2
+Amount of Errors on Current Epoch: 3
+Current Weight Vector: [-0.02, -0.07399999999999997, -0.07400000000000001, -0.07999999999999999, -0.048000000000000015]
+
+Epoch: 3
+Amount of Errors on Current Epoch: 2
+Current Weight Vector: [-0.02, -0.059999999999999956, -0.07600000000000001, -0.10599999999999998, -0.07000000000000002]
+
+Epoch: 4
+Amount of Errors on Current Epoch: 2
+Current Weight Vector: [-0.02, -0.045999999999999944, -0.07800000000000001, -0.13199999999999998, -0.09200000000000003]
+
+Target flower: Iris-versicolor
+Weights: [-0.02, -0.045999999999999944, -0.07800000000000001, -0.13199999999999998, -0.09200000000000003]
+Epochs: 4
+Errors: 2

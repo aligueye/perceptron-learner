@@ -39,14 +39,18 @@ class Model:
         else:
             self.weights = [0.0 for i in range(num_attributes + 1)]
 
-    def train(self, examples, learning_rate=0.01):
+    def train(self, examples, output_directory, learning_rate=0.01):
         """
         Trains model with provided data. Algorithm implemented is the Perceptron Training Rule
 
         args:
             examples: List of training examples
+            output_directory: Path to a file to record all of the training statistics in
             learning_rate: Rate at which the model learns
         """
+
+        with open(output_directory, 'w') as f:
+            f.write(f"Target flower: {self.flower}\n\n")
 
         while True:
             self.epochs += 1
@@ -64,10 +68,8 @@ class Model:
                     for i in range(len(example) - 1):
                         self.weights[i] = self.weights[i] + (learning_rate * (target - output) * example[i])
             
-            print(f"Epoch: {self.epochs}")
-            print(f"Amount of Errors on Current Epoch: {self.errors_at_each_epoch[-1]}")
-            print(f"Current Wight Vector: {self.weights}")
-            print(self.errors_at_each_epoch)
+            with open(output_directory, 'a') as f:
+                f.write(f"Epoch: {self.epochs}\nAmount of Errors on Current Epoch: {self.errors_at_each_epoch[-1]}\nCurrent Weight Vector: {self.weights}\n\n")
             
             # if no errors are made in the most recent epoch
             if self.errors_at_each_epoch[-1] == 0:
@@ -77,6 +79,8 @@ class Model:
                 break
             
         self.errors_after_training = self.errors_at_each_epoch[-1]
+        with open(output_directory, 'a') as f:
+            f.write(self.to_string())
 
 
     def classify(self, training_example):
@@ -114,10 +118,8 @@ class Model:
         Prints out all of the information about the model
         """
 
-        print(f"Target flower: {self.flower}")
-        print(f"Weights: {self.weights}")
-        print(f"Epochs: {self.epochs}")
-        print(f"Errors: {self.errors_after_training}")
+        output = f"Target flower: {self.flower}\nWeights: {self.weights}\nEpochs: {self.epochs}\nErrors: {self.errors_after_training}\n"
+        return output
 
 
     def graph_errors_versus_epochs(self, output_directory):
@@ -132,10 +134,6 @@ class Model:
         if self.epochs == 0:
             raise ValueError("The model has not been trained.\n\
                 The model must be trained before a graph can be produced.")
-
-        print(self.epochs)
-        print([i for i in range(self.epochs)])
-        print(self.errors_at_each_epoch)
         
         plt.plot([i for i in range(1, self.epochs + 1)], self.errors_at_each_epoch)
         plt.locator_params(axis="both", integer=True, tight=True)
