@@ -26,7 +26,7 @@ A basic descision tree learning algorithm, capable of learning a tree from multi
 1. Compatibile with python 3.6.0. 
 2. TCNJ HPC specific instructions:
 - > module add python/3.6.0
-3.Libraries that might be needed
+3. Libraries that might be needed
 - > pip install matplotlib
 4.  To run the program:
 - > python3 project4.py 
