@@ -50,11 +50,6 @@ dataset = []
 
 read_in_data('iris.data')
 
-# Naming scheme used for the model objects is
-# model_{name of target flower}_{task the model is for, with decimals replaced with underscores}
-
-# Task 2: Trains model for three different learning problems
-
 for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']:
     if task == '4.1' or task == '4.2':
         shuffle_data(f'iris_shuffle_for_T{task}.data')
