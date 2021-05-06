@@ -17,7 +17,7 @@ for row in dataset:
         row[i] = float(row[i])
     row.insert(0, 1) # Makes the first value 1, pushes every other attribute over by 1, represents w_0
 
-# Task 1: Trains model for three different learning problems
+# Task 2: Trains model for three different learning problems
 model_1_1 = Model('Iris-setosa')
 model_1_1.train(dataset)
 model_1_1.to_string()
