@@ -8,7 +8,16 @@ Epoch: 2
 Amount of Errors on Current Epoch: 2
 Current Weight Vector: [0.0, -0.07600000000000004, 0.01200000000000001, -0.132, -0.047999999999999994]
 
+Epoch: 3
+Amount of Errors on Current Epoch: 1
+Current Weight Vector: [0.02, 0.025999999999999954, 0.08200000000000002, -0.10400000000000001, -0.044]
+
+Epoch: 4
+Amount of Errors on Current Epoch: 0
+Current Weight Vector: [0.02, 0.025999999999999954, 0.08200000000000002, -0.10400000000000001, -0.044]
+
 Target flower: Iris-setosa
-Weights: [0.0, -0.07600000000000004, 0.01200000000000001, -0.132, -0.047999999999999994]
-Epochs: 2
-Errors: 2
+Weights: [0.02, 0.025999999999999954, 0.08200000000000002, -0.10400000000000001, -0.044]
+Epochs: 4
+Errors in Final Model: 0
+Errors Across All Epochs: 5

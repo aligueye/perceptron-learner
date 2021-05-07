@@ -74,8 +74,8 @@ class Model:
             # if no errors are made in the most recent epoch
             if self.errors_at_each_epoch[-1] == 0:
                 break
-            # if there are more than one epoch completed and the newest two have the same number of errors
-            if self.epochs > 1 and self.errors_at_each_epoch[-1] == self.errors_at_each_epoch[-2]:
+            # if there are more than two epochs completed and the newest three have the same number of errors
+            if self.epochs > 2 and self.errors_at_each_epoch[-1] == self.errors_at_each_epoch[-2] and self.errors_at_each_epoch[-1] == self.errors_at_each_epoch[-3]:
                 break
             
         self.errors_after_training = self.errors_at_each_epoch[-1]
@@ -118,7 +118,8 @@ class Model:
         Prints out all of the information about the model
         """
 
-        output = f"Target flower: {self.flower}\nWeights: {self.weights}\nEpochs: {self.epochs}\nErrors: {self.errors_after_training}\n"
+        output = f"Target flower: {self.flower}\nWeights: {self.weights}\nEpochs: {self.epochs}\n"
+        output += f"Errors in Final Model: {self.errors_after_training}\nErrors Across All Epochs: {sum(self.errors_at_each_epoch)}"
         return output
 
 
