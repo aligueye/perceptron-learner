@@ -25,7 +25,7 @@ path to a directory as an argument called (it is mainly used for task 4).
 - All the epoch stats files and all the plots from T4.
 6. D5
 - All the written reports from T5. 
-7. The shuffled data files from tasks 4.1 and 4.2
+7. The shuffled data files from tasks 4.1 and 4.2 (.data file)
 # Instructions for Use
 1. Compatibile with python 3.6.0. 
 2. TCNJ HPC specific instructions:
