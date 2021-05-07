@@ -25,8 +25,8 @@ go back and restructure the code.
 
 What each team member contributed:
 
-Our group worked by assigning different parts to different group members and getting together to review and debug. Ali and Corbin designed pseudocode and
-structured the design of the class. Lana and Michael implemented the training algorithm for the perceptron. Corbin worked on the matplotlib for graphing the
+Our group worked by assigning different parts to different group members and getting together to review and debug. Ali and Corbin structured the design of 
+the class and implemented the classify and predict functions. Lana and Michael implemented the training algorithm for the perceptron. Corbin worked on the matplotlib for graphing the
 epochs and errors. We all met up and worked together to evaluate and test all tasks. We all contributed to the write-ups and the README and all met up 
 multiple times to brainstorm, debug, document and analyze the code.
 
