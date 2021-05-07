@@ -1,16 +1,19 @@
 
-# Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
+# Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordano, Ali Gueye
 # Filename: Reflection
 # Description: A writeup reflecting on the assignment.
 
 (1) Anything positive you enjoyed or learned from this assignment
-We enjoyed learning how to implement the perceptron training algorithm and understanding how it classifies the data that we were given.
+We enjoyed learning how to implement the perceptron training algorithm and understanding how it classifies the data that we were given. We also liked being able 
+to work with each other. At first we all had different ideas as to how we should implement the perceptron learner, but we were able to talk together and come up
+with the best solution.
 
 (2) Anything negative you didn't like about this assignment
 - Nothing
 
 (3) Any parts of this assignment you found easy
 - None
+
 (4) Any parts of this assignment you found challenging or couldn't get working correctly
 It was challenging for us to write the perceptron algorithm. At first we had implemented a stochastic gradient descent and thought that was the correct approach
 but after further analysis and review of the project we found that we were meant to implement the perceptron training rule algorithm, so we needed to 
@@ -18,7 +21,7 @@ go back and restructure the code.
 
 (5) How the team functioned:
  The team functioned by communicating through GroupMe and meeting several times a week. Regular Zoom meetings were held to brainstorm and design
-the code and to review the progress. We split the work among us evenly.
+ the code and to review the progress. We split the work among us evenly.
 
 What each team member contributed:
 
@@ -34,7 +37,7 @@ How the team communicated with each other:
 How team software development & design was accomplished
 - During the first Zoom meeting, we were all prepared to brainstorm and discuss how we wanted to implement this project. In addition, we assigned parts of
 the design we wanted each group member to work on. As for software development, a group member would finish their task and commit it to GitHub.
-the team would come together to evaluate the code.
+The team would come together to evaluate the code, and assign future work as it was needed.
 
 (6) Any other remarks you want to make
 None
