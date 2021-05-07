@@ -1,6 +1,6 @@
 # Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
 # Filename: model.py
-# Description: Has the model class which is vital for training our perceptron. 
+# Description: Has the model class which is vital for training our perceptron, and calculating errors and epochs and a function to create a graph.  
 
 import random
 import matplotlib.pyplot as plt
