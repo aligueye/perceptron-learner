@@ -50,7 +50,7 @@ dataset = []
 
 read_in_data('iris.data')
 
-#for executing details of different tasks like shuffling for 4.1 and 4.2, setting the weights to 1 for task 3.1 and setting random weights for task 3.2 and 3.3
+#for executing details of different tasks 
 for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']: 
     if task == '4.1' or task == '4.2':  
         shuffle_data(f'iris_shuffle_for_T{task}.data') 
@@ -62,5 +62,5 @@ for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']:
         else:
             model = Model(f'Iris-{species}')
         
-        model.train(dataset, f'run_stats/task_{task}_{species}.txt') 
-        model.graph_errors_versus_epochs(f'graphs/task_{task}_{species}.pdf')
+        model.train(dataset, f'run_stats/task_{task}_{species}.txt') #the stats for each of the tasks will show up in the directory called "run_stats"
+        model.graph_errors_versus_epochs(f'graphs/task_{task}_{species}.pdf') #the graphs for each of the tasks will show up in the directory called "graphs"
