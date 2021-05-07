@@ -85,7 +85,7 @@ class Model:
 
     def classify(self, training_example):
         """
-        Classify the provided training example based on the current weights
+        Classify the provided training example by checking what its true classification is
         args:
             training_example: List of attributes to use to classify the flower type
         """
@@ -98,7 +98,7 @@ class Model:
 
     def predict(self, training_example):
         """
-        Predict the provided training example based on the current weights
+        Predict the provided training example's classification based on the current weights
         args:
             training_example: List of attributes to use in predict the flower type
         """
