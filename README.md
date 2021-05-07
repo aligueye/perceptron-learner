@@ -8,7 +8,7 @@ Implementing a perceptron learning algorithm
 1. project4.py 
 - Primarily for executing the code.
 - Contains a function for randomly shuffling data in the dataset and records it in a specified output file, it has the parameter output_directory, which is a
-path to a directory as an argument called (it is mainly used for task 4). 
+path to a directory to record all shuffled data (it is mainly used for task 4). 
 - We have a function that reads in the data from the data file given and formats it to be used for training and then a for loop to execute the tasks of the project.
 2. model.py 
 - contains a model class which contains: 
