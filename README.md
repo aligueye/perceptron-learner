@@ -3,7 +3,7 @@
 # Authors: 
  Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
 # Description: 
-A basic descision tree learning algorithm, capable of learning a tree from multiple data sources and producing a visual output.
+Implementing a perceptron learning algorithm
 # Content Guide and High-level Description of Code
 1. project4.py 
 - primarily for executing the code
