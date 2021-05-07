@@ -50,16 +50,16 @@ dataset = []
 
 read_in_data('iris.data')
 
-for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']:
-    if task == '4.1' or task == '4.2':
-        shuffle_data(f'iris_shuffle_for_T{task}.data')
-    for species in ['setosa', 'versicolor', 'virginica']:
-        if task == '3.1':
-            model = Model(f'Iris-{species}', 1)
-        elif task == '3.2' or task == '3.3':
-            model = Model(f'Iris-{species}', random_weights=True)
+for task in ['2', '3.1', '3.2', '3.3', '4.1', '4.2']: #for the indicated task
+    if task == '4.1' or task == '4.2': #if task is 4.1 or 4.2 
+        shuffle_data(f'iris_shuffle_for_T{task}.data') #shuffle it 
+    for species in ['setosa', 'versicolor', 'virginica']: #for these flower species 
+        if task == '3.1': #if the task is 3.1 
+            model = Model(f'Iris-{species}', 1) # set the weight to 1 
+        elif task == '3.2' or task == '3.3': # else assign random weights
+            model = Model(f'Iris-{species}', random_weights=True) 
         else:
             model = Model(f'Iris-{species}')
         
-        model.train(dataset, f'run_stats/task_{task}_{species}.txt')
+        model.train(dataset, f'run_stats/task_{task}_{species}.txt') 
         model.graph_errors_versus_epochs(f'graphs/task_{task}_{species}.pdf')
