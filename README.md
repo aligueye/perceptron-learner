@@ -1,7 +1,7 @@
 # perceptron-learner
 # CSC 426 Project 4
 # Authors: 
- Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
+ Lana Abdelmohsen, Corbin Grosso, Michael Giordono, Ali Gueye
 # Description: 
 Implementing a perceptron learning algorithm
 # Content Guide and High-level Description of Code
