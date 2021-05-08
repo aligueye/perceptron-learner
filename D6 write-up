@@ -40,4 +40,4 @@ the design we wanted each group member to work on. As for software development, 
 The team would come together to evaluate the code, and assign future work as it was needed.
 
 (6) Any other remarks you want to make
-None
+Note that outputs are present in their respective files (run_stats, graphs), no output will be present in the terminal.
