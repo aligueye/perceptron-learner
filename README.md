@@ -17,7 +17,7 @@ path to a directory to record all shuffled data (it is mainly used for task 4).
   - A predict function used for predicting the provided training example's classification based on the current weights (used for the output and it calculates the dot product).
   - A function that prints out all the information about the model.
   - A function for graphing the number of errors vs the number of epochs and saves the graph in the specified output directory (has output_directory as a parameter for which is a path to a file to save the graph in). 
-  - A function to initialize weights of unlearned model
+  - A function to initialize weights of the unlearned model
 3. D2
 - The "epoch stats file" containing epoch #, # of errors on training data for that epoch, and current weight vector for each of the three LPs for T2. The plot for each of the three LPs for T2.
 4. D3
