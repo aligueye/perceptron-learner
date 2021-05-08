@@ -1,4 +1,4 @@
-# Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
+# Authors: Lana Abdelmohsen, Corbin Grosso, Michael Giordano, Ali Gueye
 # Filename: project4.py
 #Description: Main file for execution of all required tasks (includes a shuffle method for task 4 to shuffle the data in the iris-data file)
 from model import Model
