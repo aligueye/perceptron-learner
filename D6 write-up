@@ -16,7 +16,7 @@ with the best solution.
 
 (4) Any parts of this assignment you found challenging or couldn't get working correctly
 It was challenging for us to write the perceptron algorithm. At first we had implemented a stochastic gradient descent and thought that was the correct approach
-but after further analysis and review of the project we found that we were meant to implement the perceptron training rule algorithm, so we needed to 
+but after further analysis and review of the project we found that we were meant to implement the perceptron training rule instead, so we needed to 
 go back and restructure the code.
 
 (5) How the team functioned:
