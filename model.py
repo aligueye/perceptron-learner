@@ -1,4 +1,4 @@
-# Authors: Lana Abdelmohsen, Corbin Grosso, Micheal Giordono, Ali Gueye
+# Authors: Lana Abdelmohsen, Corbin Grosso, Michael Giordano, Ali Gueye
 # Filename: model.py
 # Description: Has the model class which is vital for training our perceptron, calculating errors and epochs and creating graphs  
 
