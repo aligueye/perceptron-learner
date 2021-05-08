@@ -13,7 +13,7 @@ class Model:
 		Initialize unlearned model.
 
 		args:
-			flower: the model's flower type, either iris setosa, iris versicolor, or iris virginica
+	    flower: the model's flower type, either iris setosa, iris versicolor, or iris virginica
             initial_weight_value: Initial value for the weights. Ignored if random_weights=False
             random_weights: Initalizes weights to random value between 1-0. If passed False, initialize all weights to 1
 		"""
