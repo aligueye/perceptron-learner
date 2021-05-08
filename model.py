@@ -98,7 +98,7 @@ class Model:
 
     def predict(self, training_example):
         """
-        Predict the provided training examples classification based on the current weights
+        Predict the provided training example's classification based on the current weights
         args:
             training_example: List of attributes to use in predict the flower type
         """
