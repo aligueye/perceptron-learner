@@ -28,7 +28,7 @@ path to a directory to record all shuffled data (it is mainly used for task 4).
 7. The shuffled data files from tasks 4.1 and 4.2 
 - These .data files are freshly generated upon program execution
 # Instructions for Use
-1. Compatibile with python 3.6.0. 
+1. Compatible with python 3.6.0. 
 2. TCNJ HPC specific instructions:
 - > module add python/3.6.0
 3. To run the program:
