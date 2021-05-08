@@ -14,7 +14,7 @@ path to a directory to record all shuffled data (it is mainly used for task 4).
 - contains a model class which contains: 
   - A training function that implements the perceptron training algorithm using the perceptron training rule and also keeps track of the errors and epochs. Its parameters are a list of training examples, an output_directory (path to a file to record all of the training statistics in) and the learning rate as arguments. 
   - A classify function used for classifying the provided training example by checking its true classification (used for getting the target output).
-  - A predict function used for predicting the provided training examples classification based on the current weights (used for the output and it calculates the dot product).
+  - A predict function used for predicting the provided training example's classification based on the current weights (used for the output and it calculates the dot product).
   - A function that prints out all the information about the model.
   - A function for graphing the number of errors vs the number of epochs and saves the graph in the specified output directory (has output_directory as a parameter for which is a path to a file to save the graph in). 
   - A function to initialize weights of the unlearned model
