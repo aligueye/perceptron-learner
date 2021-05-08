@@ -10,13 +10,13 @@ class Model:
 
     def __init__(self, flower, initial_weight_value=0.0, random_weights=False):
         """
-		Initialize unlearned model.
+	Initialize unlearned model.
 
-		args:
+	args:
 	    flower: the model's flower type, either iris setosa, iris versicolor, or iris virginica
             initial_weight_value: Initial value for the weights. Ignored if random_weights=False
             random_weights: Initalizes weights to random value between 1-0. If passed False, initialize all weights to 1
-		"""
+	"""
 
         self.flower = flower
         self.init_weights(4, initial_weight_value, random_weights)
